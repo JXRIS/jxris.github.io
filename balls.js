@@ -1,5 +1,5 @@
 const windowWidth = window.innerWidth;
-var numBalls; //Test jajaj
+var numBalls; //To be updated
 const balls = [];
 
 if (windowWidth < 999) {
