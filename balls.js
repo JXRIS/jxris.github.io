@@ -12,12 +12,9 @@ else {
 for (let i = 0; i < numBalls; i++) {
   let ball = document.createElement("img");
   ball.classList.add("ball");
-  // ball.style.background = "#000";
   ball.style.left = `${Math.floor(Math.random() * 100)}vw`;
   ball.style.top = `0vh`;
   ball.style.transform = `scale(${Math.random()})`;
-  // ball.style.width = `${Math.random()}em`;
-  // ball.style.height = ball.style.width;
   ball.src = "./blackball.png"
 
   balls.push(ball);
@@ -38,7 +35,7 @@ balls.forEach((el, i, ra) => {
       { transform: `translate(${to.x}rem, ${to.y}rem)` }
     ],
     {
-      duration: (Math.random() + 1) * 2000, // random duration
+      duration: "1.5s", // random duration
       direction: "alternate",
       fill: "both",
       iterations: 10,
