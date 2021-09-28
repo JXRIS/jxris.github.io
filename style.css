@@ -3,13 +3,13 @@
 body {
   font-family: 'Roboto Mono', monospace;
   background: #212121;
+  height: 100vh;
 }
 
-.headertext {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+i {
+  color: #fff;
+  width: 50px;
+  height: 50px;
 }
 
 .ball {

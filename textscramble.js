@@ -61,7 +61,7 @@ const phrases = [
     'Student',
 ]
 
-const el = document.querySelector('.headertext')
+const el = document.querySelector('.encryp')
 const fx = new TextScramble(el)
 
 let counter = 0
