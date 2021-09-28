@@ -1,0 +1,5 @@
+.ball {
+    position: sticky;
+    border-radius: 100%;
+    opacity: 1;
+  }
