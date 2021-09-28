@@ -3,10 +3,10 @@ var numBalls; //To be updated
 const balls = [];
 
 if (windowWidth < 999) {
-    numBalls = 7 * (1 + windowWidth / 1000);
+  numBalls = 7 * (1 + windowWidth / 1000);
 }
 else {
-    numBalls = 10 * (1 + windowWidth / 10000);
+  numBalls = 10 * (1 + windowWidth / 10000);
 }
 
 for (let i = 0; i < numBalls; i++) {
@@ -22,24 +22,46 @@ for (let i = 0; i < numBalls; i++) {
 }
 
 console.log(balls.length);
-// Keyframes
-balls.forEach((el, i, ra) => {
-  let to = {
-    x: Math.random() * (i % 2 === 0 ? -11 : 11),
-    y: Math.random() * 12
-  };
 
+
+// Keyframes
+balls.forEach((el, i) => {
+  let to = {
+    x: Math.random() * (i % 2 === 0 ? -5 : 5),
+    y: Math.random() * 4
+  };
+  
   let anim = el.animate(
     [
       { transform: "translate(0, 0)" },
       { transform: `translate(${to.x}rem, ${to.y}rem)` }
     ],
     {
-      duration: "1.5s", // random duration
+      duration: (Math.random() + 1) * 2000, // random duration
       direction: "alternate",
       fill: "both",
-      iterations: 10,
+      iterations: 4,
       easing: "ease-in-out"
     }
   );
+
 })
+
+const elems = document.querySelectorAll('.ball');
+  setTimeout(function() {
+    for (const e of elems) {
+      e.animate(
+        
+          [
+            { transform: "scale(1.2)" }
+          ],
+          {
+            duration: 4000,
+            animation: "pop",
+
+          }
+      );
+      e.opacity == 0;
+    }
+  }, 7000);
+
