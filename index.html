@@ -10,21 +10,39 @@
 </head>
 
 <body>
-    <div class="container">
+    <div class="container-fluid headerbox">
         <div class="row min-vh-100 justify-content-center align-items-center">
             <div class="col-12 text-center">
                 <p class="display-1 text-white encryp"></p>
+                <i class="bi-discord whiteicon"></i>
+                <i class="bi-github whiteicon"></i>
+                <i class="bi-linkedin whiteicon"></i>
 
-                <i class="bi-discord"></i>
-                <i class="bi-github"></i>
-                <i class="bi-linkedin"></i>
-
+            </div>
+            <div class="col-12 text-center align-items-center">
+                <a href="#cardsbox">
+                    <i class="whiteicon cardsarrow bi bi-arrow-down"></i>
+                </a>
             </div>
         </div>
     </div>
-
+    <div class="container" id="cardsbox">
+        <div class="row min-vh-100 justify-content-center align-items-center">
+            <p class="text-white">Hoi</p>
+        </div>
+    </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
     <script src="textscramble.js"></script>
+    <script>
+        anime({
+            targets: '.cardsarrow',
+            opacity: 0,
+            duration: 1000,
+            loop: true,
+            easing: "linear",
+            direction: 'alternate'
+        });
+    </script>
 </body>
 
 </html>
